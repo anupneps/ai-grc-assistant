@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { AuditLogSchema, AuditLog } from '../../models/auditLog';
+import clientPromise from '../../../lib/mongodb';
+import { AuditLogSchema, AuditLog } from '../../../models/auditLog';
 import { ObjectId } from 'mongodb';
 
 export async function logAction(data: Omit<AuditLog, '_id' | 'createdAt'>) {

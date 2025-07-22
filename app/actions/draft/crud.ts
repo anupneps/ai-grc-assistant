@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { DraftSchema, Draft } from '../../models/draft';
+import clientPromise from '../../../lib/mongodb';
+import { DraftSchema, Draft } from '../../../models/draft';
 import { ObjectId } from 'mongodb';
 
 export async function createDraft(data: Omit<Draft, '_id' | 'createdAt' | 'updatedAt' | 'status'>) {

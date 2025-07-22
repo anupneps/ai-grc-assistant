@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { ClientSchema, Client } from '../../models/client';
+import clientPromise from '../../../lib/mongodb';
+import { ClientSchema, Client } from '../../../models/client';
 import { ObjectId } from 'mongodb';
 
 export async function createClient(data: Omit<Client, '_id'>) {

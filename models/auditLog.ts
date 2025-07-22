@@ -5,7 +5,7 @@ export const AuditLogSchema = z.object({
   action: z.string(),
   userId: z.string().optional(),
   target: z.string().optional(),
-  details: z.record(z.any()).optional(),
+  details: z.record(z.string(), z.any()).optional(),
   createdAt: z.date().optional(),
 });
 

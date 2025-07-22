@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { UserSchema, User } from '../../models/user';
+import clientPromise from '../../../lib/mongodb';
+import { UserSchema, User } from '../../../models/user';
 import { ObjectId } from 'mongodb';
 import bcrypt from 'bcryptjs';
 

@@ -5,7 +5,7 @@ export const KnowledgeBaseSchema = z.object({
   regulation: z.string(),
   version: z.string(),
   content: z.string(),
-  metadata: z.record(z.any()).optional(),
+  metadata: z.record(z.string(), z.any()).optional(),
   createdAt: z.date().optional(),
   updatedAt: z.date().optional(),
 });

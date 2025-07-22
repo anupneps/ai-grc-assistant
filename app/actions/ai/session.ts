@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { AISessionSchema, AISession } from '../../models/aiSession';
+import clientPromise from '../../../lib/mongodb';
+import { AISessionSchema, AISession } from '../../../models/aiSession';
 import { ObjectId } from 'mongodb';
 
 export async function createAISession(data: Omit<AISession, '_id' | 'createdAt' | 'updatedAt'>) {

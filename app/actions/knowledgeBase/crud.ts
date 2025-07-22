@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { KnowledgeBaseSchema, KnowledgeBase } from '../../models/knowledgeBase';
+import clientPromise from '../../../lib/mongodb';
+import { KnowledgeBaseSchema, KnowledgeBase } from '../../../models/knowledgeBase';
 import { ObjectId } from 'mongodb';
 
 export async function uploadRegulation(data: Omit<KnowledgeBase, '_id' | 'createdAt' | 'updatedAt'>) {

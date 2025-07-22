@@ -1,7 +1,7 @@
 "use server";
 
-import clientPromise from '../../lib/mongodb';
-import { DocumentSchema, Document } from '../../models/document';
+import clientPromise from '../../../lib/mongodb';
+import { DocumentSchema, Document } from '../../../models/document';
 import { ObjectId } from 'mongodb';
 
 export async function uploadDocument(data: Omit<Document, '_id' | 'uploadDate'>) {

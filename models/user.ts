@@ -7,7 +7,7 @@ export const UserSchema = z.object({
   passwordHash: z.string(),
   role: z.enum(['consultant', 'admin', 'viewer']).default('consultant'),
   associatedClients: z.array(z.string()).default([]),
-  metadata: z.record(z.any()).optional(),
+  metadata: z.record(z.string(), z.any()).optional(),
   createdAt: z.date().optional(),
   updatedAt: z.date().optional(),
 });
