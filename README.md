@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GRC Copilot MVP
+
+This project is a compliance automation platform for consultants, built with Next.js, MongoDB, and server actions. It enables AI-driven policy generation, document management, and regulatory knowledge base features.
+
+## Current Progress
+
+- **Project initialized** with Next.js (App Router, TypeScript, TailwindCSS)
+- **MongoDB connection utility** (`lib/mongodb.ts`)
+- **Zod-based models** for:
+  - Client
+  - Document
+  - Draft
+  - AISession
+  - KnowledgeBase
+  - AuditLog
+  - User (with roles, associated clients, and metadata)
+- **Server actions** for:
+  - Client CRUD (`app/actions/clientActions.ts`)
+  - User signup/signin (`app/actions/userActions.ts`)
+- **Environment setup:** `.env.local` for MongoDB URI (add manually)
+- **Linter fixes** for Zod schemas
+- **.gitignore** updated to exclude sensitive and local files
+- **todo.txt** tracks next steps
+
+## Next Steps
+
+See `todo.txt` for the current roadmap, including:
+- Server actions for documents, drafts, chat history, knowledge base, and audit logs
+- Frontend component scaffolding
+- Chat-driven workflow and canvas editor
+- Basic UI for signup/signin
 
 ## Getting Started
 
@@ -6,31 +36,18 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the project root:
 
-## Learn More
+```
+MONGODB_URI=mongodb://localhost:27017/grc-copilot-mvp
+```
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
